@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Fitness Results</h1>
+        <div class="results">
+            <p>Height: {{ user.height }} {{ user.height_unit }}</p>
+            <p>Weight: {{ user.weight }} {{ user.weight_unit }}</p>
+            <p>BMI: {{ bmi }}</p>
+            <p>BMI Category: {{ bmi_category }}</p>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn">Back to Input</a>
+    </div>
+</body>
+</html>
